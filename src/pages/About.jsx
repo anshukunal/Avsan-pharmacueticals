@@ -67,13 +67,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
-        {/* <h2>Join Us</h2>
-        <p>
-          We are always looking for talented individuals who share our passion
-          for healthcare and innovation. If you are interested in joining our
-          dynamic team, please visit our careers page for current opportunities.
-        </p> */}
       </div>
       <Footer />
       <ScrollToTop />

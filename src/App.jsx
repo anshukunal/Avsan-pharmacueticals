@@ -8,12 +8,6 @@ import NavBar from "./Componentes/NavBar";
 import ScrollToTop from "./Componentes/ScrollToTop";
 
 const App = () => {
-  // const { pathname } = useLocation();
-
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: "auto" });
-  // }, [pathname]);
-
   return (
     <>
       <ScrollToTop />

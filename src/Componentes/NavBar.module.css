@@ -23,9 +23,7 @@
   font-size: 26px;
   color: #000;
   text-decoration: none;
-  /* padding: 10px; */
   border-bottom: none;
-  transition: all ease-in 0.1s;
 }
 
 .navbar ul li a:hover {
