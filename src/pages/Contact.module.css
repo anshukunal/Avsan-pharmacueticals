@@ -1,0 +1,121 @@
+.container {
+  /* width: 80%; */
+  margin: auto;
+  overflow: hidden;
+  /* padding: 20px; */
+  background: #e3e2e2;
+  /* margin-top: 50px; */
+}
+
+.contactHeader {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 15px;
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contactHeader,
+section {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.contactInfo,
+.contactForm,
+.officeHours,
+.socialMedia {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  border-radius: 15px;
+}
+
+.contactInfo h2,
+.contactForm h2,
+.officeHours h2,
+.socialMedia h2 {
+  margin-top: 0;
+}
+
+.contactForm label,
+.contactForm input,
+.contactForm textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="tel"],
+.contactForm input[type="submit"],
+.contactForm textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contactForm input[type="submit"] {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contactForm input[type="submit"]:hover {
+  background: #555;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.socialMedia ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.socialMedia ul li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.socialMedia ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.socialMedia ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .contactHeader {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .socialMedia ul li {
+    font-size: 40px;
+  }
+}

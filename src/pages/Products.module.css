@@ -1,0 +1,167 @@
+.hero {
+  background-image: url("/our-products-page.jpg");
+  height: 60vh;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  filter: brightness(50%);
+
+  position: relative;
+}
+
+.heroText {
+  position: absolute;
+  max-width: 500px;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.heroText h2 {
+  font-size: 5em;
+  margin: 0;
+  text-align: center;
+}
+.heroText p {
+  font-size: 1.2em;
+  margin: 20px 0 0;
+}
+
+main {
+  background-color: #e7e7e7;
+  margin-top: 100px;
+  padding: 50px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.productHero {
+  background: #f0f0f0;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.productHero h2 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.productHero p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* section {
+  margin-bottom: 40px;
+} */
+
+section h3 {
+  border-bottom: 2px solid #004080;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #004080;
+}
+
+section p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.ourProducts {
+  max-width: 900px;
+  background-color: #555;
+  margin: auto;
+  padding: 0 20px;
+  padding-bottom: 50px;
+  padding-top: 100px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productImageBox {
+  max-width: 300px;
+}
+
+.productImageBox img {
+  width: 100%;
+  display: block;
+}
+
+.text {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  justify-content: space-between;
+  max-width: 700px;
+}
+
+.marginTop {
+  margin-top: 80px;
+}
+
+.borderLeft {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.borderRight {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .heroText h2 {
+    font-size: 4em;
+  }
+
+  .product {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .productImageBox {
+    order: -1;
+    margin-bottom: 18px;
+    max-width: 100%;
+  }
+
+  .text {
+    margin-bottom: 15px;
+  }
+
+  .borderLeft {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+
+  .borderRight {
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .heroText h2 {
+    font-size: 3.2em;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,176 @@
+.container {
+  /* width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+  padding: 0 20px;
+  /* background-color: #eee; */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.hero {
+  background-image: url("/about-us.png");
+  height: 60vh;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  filter: brightness(50%);
+
+  position: relative;
+}
+
+.heroText {
+  position: absolute;
+  max-width: 750px;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+.heroText h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+.heroText p {
+  font-size: 1.2em;
+  margin: 20px 0 0;
+}
+/* .content {
+  padding: 20px;
+  color: #333;
+}
+.content h2 {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 10px;
+}
+.content p {
+  margin: 10px 0;
+}
+.content ul {
+  list-style-type: disc;
+  margin: 10px 0 10px 20px;
+  padding: 0;
+}
+.content li {
+  margin: 5px 0;
+} */
+
+.aboutUs {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1100px;
+  background-color: #eee;
+  border-radius: 15px;
+}
+
+.aboutUs .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  gap: 10px;
+}
+
+.aboutUs .text {
+  flex: 1;
+  color: #555;
+  max-width: 500px;
+}
+
+.text h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.text p {
+  font-size: 20px;
+}
+
+.aboutUs .image {
+  flex: 1;
+  /* text-align: right; */
+  background-color: #fff;
+  max-width: 500px;
+}
+
+.aboutUs .image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 750px) {
+  .aboutUs .content {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .order {
+    order: -1;
+  }
+
+  .text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .borderBottom {
+    border-bottom: 1px solid black;
+    padding-bottom: 33px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroText {
+    padding-left: 20px;
+  }
+
+  .heroText p {
+    font-size: 1em;
+  }
+
+  .text h2 {
+    margin-bottom: 30px;
+  }
+
+  .aboutUs .content {
+    padding: 30px 20px;
+  }
+
+  .borderBottom {
+    border-bottom: 1px solid black;
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: 420px) {
+    .text h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .heroText {
+      padding-left: 10px;
+    }
+
+    .heroText h2 {
+      font-size: 2.2em;
+    }
+  }
+}

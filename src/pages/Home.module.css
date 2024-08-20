@@ -1,0 +1,224 @@
+.container {
+}
+
+.hero {
+  background-image: url("/home-hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  filter: brightness(50%);
+
+  position: relative;
+}
+
+.heroText {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+.heroText h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.heroText p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+.cta a {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: ease-in 0.2s;
+}
+.cta a:hover {
+  background: #0056b3;
+}
+/* .highlights {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.hero .highlights div {
+  max-width: 200px;
+}
+.hero .highlights div img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+} */
+
+/* VISION AND PRODUCTS */
+
+.visionAndOurProducts {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  padding: 60px 30px 40px 30px;
+  max-width: 400px;
+  max-height: 400px;
+}
+.visionCard {
+  background-color: #87b7d3;
+  color: #fff;
+}
+.card h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 20px;
+  color: #555;
+  margin-top: 30px;
+}
+.productsCard {
+  background-color: #06ead7;
+}
+.card button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: ease-in 0.2s;
+}
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.card button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* WHY CHOOSE US */
+
+.whyChooseUs {
+  background-color: #f5f5f5;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+.whyChooseUs h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+.reasons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.reason {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1;
+  max-width: 40%;
+  min-width: 250px;
+  text-align: left;
+}
+.reason h3 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+.reason p {
+  font-size: 16px;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .heroText h1 {
+    font-size: 42px;
+  }
+
+  .heroText p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroText h1 {
+    font-size: 32px;
+  }
+
+  .heroText p {
+    font-size: 14px;
+  }
+
+  .visionAndOurProducts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reason {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .heroText h1 {
+    font-size: 24px;
+  }
+
+  .heroText p {
+    font-size: 12px;
+  }
+
+  .cta {
+    max-width: 300px;
+    flex-direction: column;
+  }
+
+  .cta a {
+    text-align: center;
+    margin: auto;
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 375px) {
+    .card {
+      padding: 25px 20px 20px 20px;
+    }
+
+    .card h3 {
+      font-size: 34px;
+    }
+  }
+}
