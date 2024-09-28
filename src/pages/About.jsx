@@ -50,7 +50,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className={styles.content}>
+          {/* <div className={styles.content}>
             <div className={`${styles.text}`}>
               <h2>Our History</h2>
               <p>
@@ -65,7 +65,7 @@ const About = () => {
             <div class={`${styles.image} ${styles.order}`}>
               <img src="/our-history-img.jpg" alt="Pharmaceuticals Research" />
             </div>
-          </div>
+          </div> */}
         </section>
       </div>
       <Footer />

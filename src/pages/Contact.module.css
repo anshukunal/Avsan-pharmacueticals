@@ -8,7 +8,7 @@
 .contactHeader {
   max-width: 800px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 110px;
   border-radius: 15px;
   background: #333;
   color: #fff;
@@ -56,7 +56,6 @@ header h1 {
 
 .contactForm input[type="text"],
 .contactForm input[type="email"],
-.contactForm input[type="tel"],
 .contactForm input[type="submit"],
 .contactForm textarea {
   padding: 10px;

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import { AiFillFacebook } from "react-icons/ai";
-import { AiFillTwitterSquare } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
@@ -46,16 +45,19 @@ const Footer = () => {
         <div class={styles.footerColumn}>
           <h3>Follow Us</h3>
           <div className={styles.socialIcons}>
-            <a href="https://facebook.com" target="_blank">
+            <a
+              href="https://www.facebook.com/profile.php?id=61550048401900"
+              target="_blank"
+            >
               <AiFillFacebook />
             </a>
-            <a href="https://twitter.com" target="_blank">
-              <AiFillTwitterSquare />
-            </a>
-            <a href="https://linkedin.com" target="_blank">
+            <a href="https://www.linkedin.com/in/av-pharma/" target="_blank">
               <AiFillLinkedin />
             </a>
-            <a href="https://instagram.com" target="_blank">
+            <a
+              href="https://www.instagram.com/avsanpharmaceuticals?utm_source=qr&igsh=cmNkNDhsd2k0cTRi"
+              target="_blank"
+            >
               <AiFillInstagram />
             </a>
           </div>

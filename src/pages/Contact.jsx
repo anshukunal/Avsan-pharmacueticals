@@ -27,7 +27,7 @@ const Contact = () => {
 
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "9fa68217-7282-4229-b384-224193723822");
+    formData.append("access_key", "3b75fc45-b3da-4710-bb2c-988de664386e");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -48,6 +48,8 @@ const Contact = () => {
         icon: "success",
       });
     }
+    setFormValue.name("");
+    setFormValue.email("");
   };
 
   const validationform = (value) => {
@@ -88,8 +90,8 @@ const Contact = () => {
         <section className={styles.contactForm}>
           <h2 className={styles.heading}>Contact Form</h2>
           <form onSubmit={onSubmit}>
-            <label for="name">Full Name:</label>
-            <div>
+            <div className={styles.inputBox}>
+              <label for="name">Full Name:</label>
               <input
                 type="text"
                 id="name"
@@ -139,16 +141,25 @@ const Contact = () => {
           <h2 className={styles.heading}>Follow Us</h2>
           <ul>
             <li>
-              <AiFillFacebook />
+              <a
+                href="https://www.facebook.com/profile.php?id=61550048401900"
+                target="_blank"
+              >
+                <AiFillFacebook />
+              </a>
             </li>
             <li>
-              <AiFillTwitterSquare />
+              <a href="https://www.linkedin.com/in/av-pharma/" target="_blank">
+                <AiFillLinkedin />
+              </a>
             </li>
             <li>
-              <AiFillLinkedin />
-            </li>
-            <li>
-              <AiFillInstagram />
+              <a
+                href="https://www.instagram.com/avsanpharmaceuticals?utm_source=qr&igsh=cmNkNDhsd2k0cTRi"
+                target="_blank"
+              >
+                <AiFillInstagram />
+              </a>
             </li>
           </ul>
         </section>

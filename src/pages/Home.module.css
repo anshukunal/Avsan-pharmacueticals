@@ -29,29 +29,6 @@
   font-size: 24px;
   margin-bottom: 40px;
 }
-.cta {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  max-width: 500px;
-}
-.cta a {
-  background: #007bff;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
-  transition: ease-in 0.2s;
-}
-.cta a:hover {
-  background: #0056b3;
-}
 
 /* VISION AND PRODUCTS */
 
@@ -134,12 +111,12 @@
   margin: 10px;
   padding: 20px;
   flex: 1;
-  max-width: 40%;
+  max-width: 35%;
   min-width: 250px;
   text-align: left;
 }
 .reason h3 {
-  font-size: 24px;
+  font-size: 22px;
   color: #007bff;
   margin-bottom: 15px;
 }
@@ -171,10 +148,6 @@
     flex-direction: column;
     align-items: center;
   }
-
-  .reason {
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 550px) {
@@ -184,18 +157,6 @@
 
   .heroText p {
     font-size: 12px;
-  }
-
-  .cta {
-    max-width: 300px;
-    flex-direction: column;
-  }
-
-  .cta a {
-    text-align: center;
-    margin: auto;
-    padding: 10px 16px;
-    font-size: 16px;
   }
 
   @media (max-width: 375px) {

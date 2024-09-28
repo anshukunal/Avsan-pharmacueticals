@@ -1,6 +1,6 @@
 .hero {
   background-image: url("/our-products-page.jpg");
-  height: 60vh;
+  height: 70vh;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -96,24 +96,33 @@ section p {
   text-align: center;
   padding: 10px;
   font-size: 18px;
+  background: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .product {
   display: flex;
   align-items: center;
-  background: #fff;
+  background: transparent;
   border-radius: 15px;
   justify-content: space-between;
   max-width: 700px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.marginTop {
-  margin-top: 80px;
+.productItem {
+  transition: all 0.2s;
 }
 
-.borderLeft {
+.productItem:hover {
+  transform: translateY(-10px);
+}
+
+.borderTop {
   border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .borderRight {
@@ -133,7 +142,7 @@ section p {
 
   .productImageBox {
     order: -1;
-    margin-bottom: 18px;
+
     max-width: 100%;
   }
 

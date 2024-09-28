@@ -18,10 +18,6 @@ const Home = ({ children }) => {
             Life-Saving Treatments
           </p>
         </div>
-        <div className={styles.cta}>
-          <NavLink to="/about">Learn More About Us</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
-        </div>
 
         <section className={styles.visionAndOurProducts}>
           <div className={`${styles.visionCard} ${styles.card}`}>
@@ -61,11 +57,12 @@ const Home = ({ children }) => {
                 meets the highest standards of safety and efficacy.
               </p>
             </div>
+
             <div class={styles.reason}>
-              <h3>Global Reach</h3>
+              <h3>Experienced Team</h3>
               <p>
-                We are committed to making a global impact, with our products
-                available in over 100 countries worldwide.
+                Our team of experts includes some of the most respected
+                scientists and healthcare professionals in the industry.
               </p>
             </div>
             <div class={styles.reason}>
@@ -73,13 +70,6 @@ const Home = ({ children }) => {
               <p>
                 Our primary focus is on improving patient outcomes and enhancing
                 the quality of life through personalized treatment plans.
-              </p>
-            </div>
-            <div class={styles.reason}>
-              <h3>Experienced Team</h3>
-              <p>
-                Our team of experts includes some of the most respected
-                scientists and healthcare professionals in the industry.
               </p>
             </div>
             <div class={styles.reason}>

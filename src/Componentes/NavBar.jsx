@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const NavBar = () => {
   const [navigator, setNavigator] = useState(true);
+  const navRef = useRef();
+
+  useGSAP(() => {
+    gsap.from(navRef.current, {
+      duration: 1,
+      delay: 0.5,
+      y: "-100%",
+      ease: "bounce",
+    });
+  });
 
   function handleButton() {
     setNavigator((curr) => !curr);
   }
 
   return (
-    <div className={styles.navbar}>
+    <div ref={navRef} className={styles.navbar}>
       <div className={styles.imgContainer}>
         <NavLink to="/">
           <img src="./logo-avsan.png" alt="Company Logo" />
