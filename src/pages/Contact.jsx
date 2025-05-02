@@ -3,15 +3,33 @@ import styles from "./Contact.module.css";
 import NavBar from "../Componentes/NavBar";
 import Footer from "../Componentes/Footer";
 import Swal from "sweetalert2";
-import { AiFillFacebook } from "react-icons/ai";
-import { AiFillTwitterSquare } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillInstagram } from "react-icons/ai";
+// import { AiFillFacebook } from "react-icons/ai";
+// import { AiFillLinkedin } from "react-icons/ai";
+// import { AiFillInstagram } from "react-icons/ai";
 
 const Contact = () => {
-  const [formValue, setFormValue] = useState({ name: "", email: "" });
+  const [formValue, setFormValue] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
   const [formError, setFormError] = useState({});
   const [issubmit, setSubmit] = useState(false);
+  const [ripples, setRipples] = useState([]);
+
+  const createRipple = (event) => {
+    const { clientX, clientY, target } = event;
+    const rect = target.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    const newRipple = { x, y, id: Date.now() };
+    setRipples((prev) => [...prev, newRipple]);
+
+    setTimeout(() => {
+      setRipples((prev) => prev.filter((ripple) => ripple.id !== newRipple.id));
+    }, 600);
+  };
 
   const emailPattern =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -75,55 +93,93 @@ const Contact = () => {
   }, [formError, formValue, issubmit]);
 
   return (
-    <div>
+    <div className={styles.contact}>
       <NavBar />
       <div className={styles.container}>
-        <header className={styles.contactHeader}>
-          <h1>Contact Us</h1>
-          <p>
-            Thank you for your interest in Avsan Pharmaceuticals. We value your
-            feedback and inquiries. Please use the form below to get in touch
-            with us, and we will respond to you as soon as possible.
-          </p>
-        </header>
+        <div className={styles.contactImgBox}></div>
+        <div className={styles.contactContent}>
+          <header className={styles.contactHeader}>
+            <h1>Contact Us</h1>
+          </header>
 
-        <section className={styles.contactForm}>
-          <h2 className={styles.heading}>Contact Form</h2>
-          <form onSubmit={onSubmit}>
-            <div className={styles.inputBox}>
-              <label for="name">Full Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formValue.name}
-                onChange={handlevalidation}
-                required
-              />
-              <span className="text-danger">{formError.name} </span>
-            </div>
+          <section className={styles.contactForm}>
+            <form onSubmit={onSubmit}>
+              <div className={styles.nameContactBox}>
+                <div className={styles.inputBox}>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    value={formValue.name}
+                    onChange={handlevalidation}
+                    required
+                  />
+                  <span className="text-danger">{formError.name} </span>
+                </div>
 
-            <label for="email">Email Address:</label>
-            <div>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formValue.email}
-                onChange={handlevalidation}
-                required
-              />
-              <span className="text-danger">{formError.email} </span>
-            </div>
+                <div className={styles.marginLeft}>
+                  <input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    placeholder="Contact Number"
+                    value={formValue.phone}
+                    onChange={handlevalidation}
+                    required
+                  />
+                  <span className="text-danger">{formError.phone} </span>
+                </div>
+              </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+              <div className={styles.Email}>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formValue.email}
+                  onChange={handlevalidation}
+                  required
+                />
+                <span className="text-danger">{formError.email} </span>
+              </div>
 
-            <input type="submit" value="Send" />
-          </form>
-        </section>
+              <div className={styles.messageBox}>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
 
-        <section className={styles.contactInfo}>
+              <div className={styles.sendButtonBox}>
+                <button className={styles.sendButton} onClick={createRipple}>
+                  Send
+                  {ripples.map(({ x, y, id }) => (
+                    <span
+                      key={id}
+                      className={styles.ripple}
+                      style={{ left: x, top: y }}
+                    ></span>
+                  ))}
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Contact;
+
+{
+  /* <section className={styles.contactInfo}>
           <h2 className={styles.heading}>Contact Information</h2>
           <p>
             <strong>Avsan Pharmaceuticals</strong>
@@ -162,11 +218,5 @@ const Contact = () => {
               </a>
             </li>
           </ul>
-        </section>
-      </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default Contact;
+        </section> */
+}

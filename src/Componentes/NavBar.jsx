@@ -1,33 +1,26 @@
 import React, { useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
-const NavBar = () => {
+const NavBar = ({ scrolled }) => {
   const [navigator, setNavigator] = useState(true);
   const navRef = useRef();
-
-  useGSAP(() => {
-    gsap.from(navRef.current, {
-      duration: 1,
-      delay: 0.5,
-      y: "-100%",
-      ease: "bounce",
-    });
-  });
 
   function handleButton() {
     setNavigator((curr) => !curr);
   }
 
   return (
-    <div ref={navRef} className={styles.navbar}>
+    <nav
+      ref={navRef}
+      className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
+    >
       <div className={styles.imgContainer}>
         <NavLink to="/">
-          <img src="./logo-avsan.png" alt="Company Logo" />
+          <img src="./logo-img.png" alt="Company Logo" />
         </NavLink>
       </div>
       <div
@@ -43,7 +36,7 @@ const NavBar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">About Us</NavLink>
           </li>
           <li>
             <NavLink to="/products">Our Products</NavLink>
@@ -58,7 +51,7 @@ const NavBar = () => {
           <RxHamburgerMenu />
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

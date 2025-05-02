@@ -1,29 +1,47 @@
-.container {
-  margin: auto;
-  overflow: hidden;
+.contact nav ul li a::after {
+  background: #ffcc00;
+}
 
-  background: #e3e2e2;
+.contact footer {
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.contactImgBox {
+  background-image: url(./contact-form-img.jpeg);
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+}
+
+.contactContent {
+  flex: 1;
 }
 
 .contactHeader {
   max-width: 800px;
   margin: auto;
-  margin-top: 110px;
+  margin-top: 80px;
   border-radius: 15px;
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
+  /* background: #058ddb; */
+  color: #000;
   text-align: center;
 }
 
-.contactHeader,
-section {
-  margin-bottom: 20px;
+header h1 {
+  padding-bottom: 10px;
 }
 
-header h1 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
+.nameContactBox {
+  display: flex;
+  justify-content: center;
+}
+
+.marginLeft {
+  margin-left: 10px;
 }
 
 .contactInfo,
@@ -33,9 +51,9 @@ header h1 {
   max-width: 500px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   margin-bottom: 20px;
-  background: #f9f9f9;
+  background: #1bd7bb;
   border-radius: 15px;
 }
 
@@ -46,21 +64,45 @@ header h1 {
   margin-top: 0;
 }
 
+.contactForm {
+  background: transparent;
+  background-image: url(./contact-form-img.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
 .contactForm label,
 .contactForm input,
 .contactForm textarea {
   display: block;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .contactForm input[type="text"],
 .contactForm input[type="email"],
+.contactForm input[type="number"],
 .contactForm input[type="submit"],
 .contactForm textarea {
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm input[type="number"]:focus,
+.contactForm input[type="submit"]:focus,
+.contactForm textarea:focus {
+  background: #fff;
+}
+
+.contactForm input[type="number"]::-webkit-inner-spin-button,
+.contactForm input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .contactForm input[type="submit"] {
@@ -69,8 +111,29 @@ header h1 {
   cursor: pointer;
 }
 
+.contactForm input::placeholder {
+  color: #000;
+}
+
+.contactForm textarea::placeholder {
+  color: #000;
+}
+
 .contactForm input[type="submit"]:hover {
   background: #555;
+}
+
+.Email {
+  max-width: 365px;
+  margin: auto;
+}
+
+.messageBox {
+  max-width: 365px;
+  margin: auto;
+}
+.sendButtonBox {
+  text-align: center;
 }
 
 .heading {
@@ -101,18 +164,42 @@ header h1 {
   text-decoration: underline;
 }
 
-@media (max-width: 900px) {
-  .container {
-    padding: 0 20px;
-  }
+.sendButton {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 200px;
+}
 
-  .contactHeader {
-    padding: 20px 10px;
+.ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
   }
 }
 
-@media (max-width: 375px) {
-  .socialMedia ul li {
-    font-size: 40px;
+@media (max-width: 600px) {
+  /* .nameContactBox {
+    display: block;
+  } */
+
+  .contactImgBox {
+    background-image: none;
+    display: none;
   }
 }

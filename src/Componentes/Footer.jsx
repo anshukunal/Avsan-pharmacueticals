@@ -5,14 +5,14 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ noMargin }) => {
   let currentYear = new Date().getFullYear();
 
   return (
-    <footer>
+    <footer class={styles.footer}>
       <div class={styles.footerContainer}>
         <div class={styles.footerColumn}>
-          <h3>About Avsan Pharmaceuticals</h3>
+          <h3>About Avsan Pharmaceuticals Pvt.Ltd</h3>
           <p>
             At Avsan Pharmaceuticals, we are dedicated to improving health and
             well-being through innovative research and advanced medical
@@ -37,7 +37,7 @@ const Footer = () => {
         <div class={styles.footerColumn}>
           <h3>Contact Us</h3>
           <p>Email: avsanpharma@gmail.com</p>
-          <p>Phone: 011-35679982</p>
+          <p>Phone: 9354933611</p>
           <p>
             Address: 10th Floor, Roots Tower, 1016, Nirman Vihar, Delhi - 110092
           </p>

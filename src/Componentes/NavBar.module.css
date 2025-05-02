@@ -3,13 +3,22 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 10px 20px;
-  border: 0.5px solid #999;
+  padding: 4px 40px;
+  background: #058ddb;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.scrolled {
+  background: #058ddb !important;
+}
+
+.scrolled ul li a:hover {
+  color: #000 !important;
 }
 
 .navbar ul {
@@ -20,24 +29,46 @@
 }
 
 .navbar ul li a {
-  font-size: 26px;
-  color: #000;
+  position: relative;
+  font-size: 19px;
+  color: #fff;
   text-decoration: none;
   border-bottom: none;
-  transition: all 0.2s;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  /* background: #ffcc00; */
+  background: #fff;
+  transition: width 0.4s ease-in-out;
+}
+
+.scrolled ul li a::after {
+  background: #ffcc00;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 .navbar ul li a:hover {
-  color: #64a7ff;
-  border-bottom: 1px solid #000;
+  color: #000;
+  transition: color 0.3s ease-in-out;
 }
 
 .imgContainer {
-  max-width: 50px;
+  max-width: 40px;
+  background: transparent;
 }
 
 .imgContainer img {
   width: 100%;
+  background: transparent;
 }
 
 .btn {
@@ -56,18 +87,31 @@
     top: 0;
     right: 0;
     width: 100vw;
-    height: 100vh;
-    background-color: #888;
-    transition: right 0.3s ease;
+    height: 1000vh;
+    background-color: #058ddb;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
   }
 
   .displayNone {
     position: fixed;
-    top: -105%;
-    right: -100%;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 1000vh;
+    background-color: #058ddb;
+    transform: translateX(100%); /* Moves sidebar off-screen */
+    transition: transform 0.3s ease-in-out;
   }
 
   .displayBlock ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .displayNone ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,8 +125,10 @@
   .btn button {
     padding: 10px;
     font-size: 26px;
-    color: #000;
+    color: #fff;
     background: transparent;
     border: none;
+    display: flex;
+    align-items: center;
   }
 }

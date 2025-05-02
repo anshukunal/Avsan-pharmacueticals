@@ -1,4 +1,24 @@
-.container {
+.marginLeft {
+  margin-left: 18px;
+}
+
+.home nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px 40px;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.home nav ul li a:hover {
+  color: #0f7aa5;
+  transition: color 0.3s ease-in-out;
 }
 
 .hero {
@@ -6,23 +26,24 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  filter: brightness(50%);
+  /* filter: brightness(50%); */
 
   position: relative;
 }
 
 .heroText {
   position: absolute;
-  top: 30%;
-  left: 0;
+  top: 22%;
   right: 0;
+  max-width: 500px;
   margin: 0 auto;
   color: #fff;
   text-align: center;
+  transform: translate(8px, -50%);
 }
 
 .heroText h1 {
-  font-size: 48px;
+  font-size: 72px;
   margin-bottom: 20px;
 }
 .heroText p {
@@ -30,56 +51,51 @@
   margin-bottom: 40px;
 }
 
-/* VISION AND PRODUCTS */
-
-.visionAndOurProducts {
+.btnContainer {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.btn {
+  /* background: linear-gradient(90deg, #74ebf4 0%, #9facfd 100%); */
+  /* background: linear-gradient(90deg, #9d8977 0%, #8f7762 100%); */
+  background: linear-gradient(90deg, #06837f 0%, #4faaa7 100%);
+  position: relative;
+  display: inline-block;
   overflow: hidden;
-  margin: 20px;
-  text-align: center;
-  padding: 60px 30px 40px 30px;
-  max-width: 400px;
-  max-height: 400px;
-}
-.visionCard {
-  background-color: #87b7d3;
-  color: #fff;
-}
-.card h3 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-.card p {
-  font-size: 20px;
-  color: #555;
-  margin-top: 30px;
-}
-.productsCard {
-  background-color: #06ead7;
-}
-.card button {
-  background-color: #007bff;
   border: none;
   padding: 10px 20px;
   margin-top: 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: ease-in 0.2s;
-}
-.card button:hover {
-  background-color: #0056b3;
+  transition: background-position 1s ease-in-out, transform 0.6s ease-in-out;
 }
 
-.card button a {
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(90deg, #886e58 0%, #b2a496 100%); */
+  background: linear-gradient(90deg, #86ece9 0%, #06837f 100%);
+  opacity: 0;
+  color: #fff;
+  border-radius: 5px;
+  z-index: -1;
+  transition: opacity 1s ease-in-out;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:hover {
+  /* background: linear-gradient(90deg, #886e58 0%, #b2a496 100%); */
+  transform: scale(1.05);
+}
+
+.btn a {
   text-decoration: none;
   color: #fff;
 }
@@ -87,24 +103,24 @@
 /* WHY CHOOSE US */
 
 .whyChooseUs {
-  background-color: #f5f5f5;
   padding: 50px 20px;
   text-align: center;
   margin-top: 50px;
+  background: linear-gradient(#f6f6f6 0%, #e0ffff 100%);
 }
 .whyChooseUs h2 {
   font-size: 32px;
   margin-bottom: 30px;
   color: #333;
 }
-.reasons {
+.featuresBox {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 900px;
   margin: 0 auto;
 }
-.reason {
+.feature {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -115,19 +131,28 @@
   min-width: 250px;
   text-align: left;
 }
-.reason h3 {
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.feature h3 {
   font-size: 22px;
   color: #007bff;
   margin-bottom: 15px;
+  text-align: center;
 }
-.reason p {
+.feature p {
   font-size: 16px;
   color: #555;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
   .heroText h1 {
-    font-size: 42px;
+    font-size: 70px;
   }
 
   .heroText p {
@@ -136,9 +161,9 @@
 }
 
 @media (max-width: 768px) {
-  .heroText h1 {
+  /* .heroText h1 {
     font-size: 32px;
-  }
+  } */
 
   .heroText p {
     font-size: 14px;
@@ -152,7 +177,7 @@
 
 @media (max-width: 550px) {
   .heroText h1 {
-    font-size: 24px;
+    font-size: 54px;
   }
 
   .heroText p {
@@ -160,6 +185,10 @@
   }
 
   @media (max-width: 375px) {
+    .heroText h1 {
+      font-size: 48px;
+    }
+
     .card {
       padding: 25px 20px 20px 20px;
     }

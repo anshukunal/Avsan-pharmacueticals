@@ -1,163 +1,119 @@
-.hero {
-  background-image: url("/our-products-page.jpg");
-  height: 70vh;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  filter: brightness(50%);
-
-  position: relative;
+.products nav ul li a::after {
+  background: #ffcc00;
 }
 
-.heroText {
-  position: absolute;
-  max-width: 500px;
-  top: 30%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  color: #fff;
-}
-
-.heroText h2 {
-  font-size: 5em;
-  margin: 0;
-  text-align: center;
-}
-.heroText p {
-  font-size: 1.2em;
-  margin: 20px 0 0;
-}
-
-main {
-  background-color: #e7e7e7;
-  margin-top: 100px;
-  padding: 50px 0;
+.products footer {
+  margin-top: 60px;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.productHero {
-  background: #f0f0f0;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.productHero h2 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-.productHero p {
-  font-size: 1.2em;
-  color: #555;
-}
-
-section h3 {
-  border-bottom: 2px solid #004080;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 1.8em;
-  color: #004080;
-}
-
-section p {
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-.ourProducts {
-  max-width: 900px;
-  background-color: #555;
-  margin: auto;
-  padding: 0 20px;
-  padding-bottom: 50px;
-  padding-top: 100px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.productImageBox {
-  max-width: 300px;
-}
-
-.productImageBox img {
   width: 100%;
-  display: block;
+  height: 70vh;
+  margin: auto;
+  position: relative;
+  margin-top: 60px;
 }
 
-.text {
-  text-align: center;
-  padding: 10px;
-  font-size: 18px;
-  background: #fff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+.nameStyle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: #000;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.product {
+.transition {
+  opacity: 0;
+}
+
+.leftArrowStyle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+  color: #333;
+  font-size: 45px;
+}
+
+.rightArrowStyle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+  color: #333;
+  font-size: 45px;
+  transition: 1s;
+  right: 0;
+}
+
+.dotStylesContainer {
   display: flex;
+  justify-content: center;
+}
+
+.dotStyles {
+  margin: 0 3px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #99ffff;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  background: transparent;
+  margin-top: 100px;
+}
+
+.cardBox {
+  max-width: 300px;
+  justify-self: center;
+  text-align: center;
+  margin-bottom: 50px;
+  border: 1px solid #000;
   border-radius: 15px;
-  justify-content: space-between;
-  max-width: 700px;
-  gap: 10px;
-  margin-bottom: 20px;
+  /* box-shadow: 5px 5px 20px dodgerblue; */
 }
 
-.productItem {
-  transition: all 0.2s;
-}
-
-.productItem:hover {
-  transform: translateY(-10px);
-}
-
-.borderTop {
+.cardImage {
+  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  flex: 1;
 }
 
-.borderRight {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+.cardImage img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
+  vertical-align: bottom;
+}
+
+.productContent {
+  text-align: center;
+  flex: 1;
+}
+
+.productText {
+  max-width: 400px;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
-  .heroText h2 {
-    font-size: 4em;
-  }
-
-  .product {
-    flex-direction: column;
-    max-width: 400px;
-  }
-
-  .productImageBox {
-    order: -1;
-
-    max-width: 100%;
-  }
-
-  .text {
-    margin-bottom: 15px;
-  }
-
-  .borderLeft {
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-  }
-
-  .borderRight {
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 15px;
+  .products footer {
+    margin-top: 75px;
   }
 }
 
@@ -168,5 +124,11 @@ section p {
 
   .text {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .dotStyles {
+    font-size: 25px;
   }
 }
