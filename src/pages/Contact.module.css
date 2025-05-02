@@ -11,7 +11,7 @@
 }
 
 .contactImgBox {
-  background-image: url(./contact-form-img.jpeg);
+  background-image: url(./contact-form-img.jpg);
   background-size: cover;
   background-position: center;
   flex: 1;
@@ -53,7 +53,6 @@ header h1 {
   padding: 20px;
   /* border: 1px solid #ddd; */
   margin-bottom: 20px;
-  background: #1bd7bb;
   border-radius: 15px;
 }
 
@@ -64,13 +63,13 @@ header h1 {
   margin-top: 0;
 }
 
-.contactForm {
+/* .contactForm {
   background: transparent;
   background-image: url(./contact-form-img.jpg);
   background-size: cover;
   background-position: center;
   color: #000;
-}
+} */
 
 .contactForm label,
 .contactForm input,

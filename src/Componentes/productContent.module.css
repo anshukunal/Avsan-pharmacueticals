@@ -36,9 +36,18 @@
   font-size: 50px;
 }
 
-.productText p {
+.productDetails ul {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.productDetails li {
   line-height: 30px;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.marginBottom {
+  margin-bottom: 10px;
 }
 
 @media (max-width: 900px) {
@@ -99,6 +108,10 @@
 
   .row27 {
     grid-row: 28;
+  }
+
+  .row31 {
+    grid-row: 32;
   }
 
   .marginBottom {

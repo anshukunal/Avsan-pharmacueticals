@@ -84,12 +84,12 @@ function ProductContent() {
       >
         <div className={styles.productText}>
           <h3>APZOX Tablets</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>
+              <li className={styles.marginBottom}>
                 Aceclofenac, Paracetamol & Chlorzoxazone Tablets
               </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Tablets </li>
+              <li>Packing : 1*10 Tablets </li>
             </ul>
           </div>
         </div>
@@ -104,10 +104,10 @@ function ProductContent() {
       >
         <div className={styles.productText}>
           <h3>AV Glu</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>L-Glutamine</li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*6 Sachet</li>
+              <li className={styles.marginBottom}>L-Glutamine</li>
+              <li>Packing : 1*6 Sachet</li>
             </ul>
           </div>
         </div>
@@ -142,12 +142,12 @@ function ProductContent() {
       >
         <div className={styles.productText}>
           <h3>AV Multi</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>
+              <li className={styles.marginBottom}>
                 Multivitamin & Multimineral with Grape Seeds
               </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*30 Tablet</li>
+              <li>Packing : 1*30 Tablet</li>
             </ul>
           </div>
         </div>
@@ -162,14 +162,14 @@ function ProductContent() {
       >
         <div className={`${styles.productText} `}>
           <h3>AV Ten</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>
+              <li className={styles.marginBottom}>
                 Ubidecarenone, Lycopene, Omega-3-Fatty Acid, Mixed Carotene 10%,
                 Wheat Grem Oil, Calcium Ascorbate, Vitamine B12, Selenium
                 Dioxied & Zinc Sulphate Monohydrate Soft Gelatin Capsules
               </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Tablet</li>
+              <li>Packing : 1*10 Tablet</li>
             </ul>
           </div>
         </div>
@@ -204,15 +204,13 @@ function ProductContent() {
       >
         <div className={`${styles.productText} `}>
           <h3>AV Trienol</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>
+              <li className={styles.marginBottom}>
                 Gamma & delta tocotrienol isomers derived from tocotrienol rich
                 fractions
               </li>
-              <li style={{ marginBottom: "10px" }}>
-                Packing : 1*30 Softgel Capsules
-              </li>
+              <li>Packing : 1*30 Softgel Capsules</li>
             </ul>
           </div>
         </div>
@@ -227,13 +225,13 @@ function ProductContent() {
       >
         <div className={`${styles.productText} `}>
           <h3>Avitaz</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>
+              <li className={styles.marginBottom}>
                 Ceftazidime and Avibactam Power for ConCentrate for Solution for
                 Infusion 2.5g
               </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*1 Injection</li>
+              <li>Packing : 1*1 Injection</li>
             </ul>
           </div>
         </div>
@@ -256,7 +254,7 @@ function ProductContent() {
         viewport={{ amount: 0.7 }}
         className={styles.cardImage}
       >
-        <img src="./calote_img.png" alt="Calote" />
+        <img src="./avixib_img.png" alt="Avixib" />
       </motion.div>
 
       <motion.div
@@ -264,37 +262,48 @@ function ProductContent() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ amount: 0.7 }}
-        className={`${styles.productContent}`}
+        className={`${styles.productContent} `}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Avixib</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>
+                Etoricoxib Soft Gel Capsules 60mg
+              </li>
+              <li>Packing : 1*10 Capsules</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent} ${styles.row15}`}
       >
         <div className={`${styles.productText} `}>
           <h3>Calote</h3>
-          <div style={{ textAlign: "left" }}>
+          <div className={styles.productDetails}>
             <ul>
-              <li style={{ marginBottom: "10px" }}>
+              <li className={styles.marginBottom}>
                 Clacium Orotate, Magnesium Orotae & Vitamin D3
               </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Tablet</li>
+              <li>Packing : 1*10 Tablet</li>
             </ul>
           </div>
         </div>
       </motion.div>
-
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} ${styles.row15} `}
+        className={styles.cardImage}
       >
-        <div className={`${styles.productText} `}>
-          <h3>Genu Oil</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>Pain Relief Oil</li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*1 Bottle</li>
-            </ul>
-          </div>
-        </div>
+        <img src="./calote_img.png" alt="Calote" />
       </motion.div>
 
       <motion.div
@@ -308,6 +317,41 @@ function ProductContent() {
       </motion.div>
 
       <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent}  `}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Genu Oil</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>Pain Relief Oil</li>
+              <li>Packing : 1*1 Bottle</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent} ${styles.row19}`}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Glutasn 250MG</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>L-Glutathione</li>
+              <li>Packing : 1*10 Capsules</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -315,42 +359,6 @@ function ProductContent() {
         className={styles.cardImage}
       >
         <img src="./glutasan_250mg_img.png" alt="Glutasan 250mg" />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} `}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Glutasn 250MG</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>L-Glutathione</li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Capsules</li>
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} ${styles.row19} `}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Glutasan 600MG</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>Glutathione</li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*1 Injection</li>
-            </ul>
-          </div>
-        </div>
       </motion.div>
 
       <motion.div
@@ -364,6 +372,41 @@ function ProductContent() {
       </motion.div>
 
       <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent}  `}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Glutasan 600MG</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>Glutathione</li>
+              <li>Packing : 1*1 Injection</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent} ${styles.row23}`}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Livosam</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>S-Adenosyl-L-Methionine </li>
+              <li>Packing : 1*10 Tablets</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -371,44 +414,6 @@ function ProductContent() {
         className={styles.cardImage}
       >
         <img src="./livosam_img.png" alt="Livosam" />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} `}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Livosam</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>S-Adenosyl-L-Methionine </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Tablets</li>
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} ${styles.row23} `}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Lung Plus</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>
-                Protein Power, Food Supplement for Respiratory Care
-              </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*1 Bottle</li>
-            </ul>
-          </div>
-        </div>
       </motion.div>
 
       <motion.div
@@ -420,7 +425,45 @@ function ProductContent() {
       >
         <img src="./lung_plus_img.png" alt="Lung Plus" />
       </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent}  `}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Lung Plus</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>
+                Protein Power, Food Supplement for Respiratory Care
+              </li>
+              <li>Packing : 1*1 Bottle</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent}  ${styles.row27}`}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Rivosan</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>
+                Rifaximin Tablets BP 550Mg
+              </li>
+              <li>Packing : 1*10 Tablets</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -432,46 +475,6 @@ function ProductContent() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent}  `}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Rivosan</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>
-                Rifaximin Tablets BP 550Mg
-              </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Tablets</li>
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} ${styles.row27} `}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Sanigest</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>
-                Ursodeoxycholic Acid Tablets IP 300mg
-              </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*10 Tablets</li>
-            </ul>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -479,6 +482,46 @@ function ProductContent() {
         className={styles.cardImage}
       >
         <img src="./sanigest_img.png" alt="Sanigest" />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent}  `}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Sanigest</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>
+                Ursodeoxycholic Acid Tablets IP 300mg
+              </li>
+              <li>Packing : 1*10 Tablets</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ amount: 0.7 }}
+        className={`${styles.productContent} ${styles.marginBottom} ${styles.row31}`}
+      >
+        <div className={`${styles.productText} `}>
+          <h3>Sanov D3</h3>
+          <div className={styles.productDetails}>
+            <ul>
+              <li className={styles.marginBottom}>
+                Vitamin D3 Oral Solution 60000 IU
+              </li>
+              <li className={styles.marginBottom}>Packing : 1*4 Nano Shots</li>
+              <li>Suger Free</li>
+            </ul>
+          </div>
+        </div>
       </motion.div>
 
       <motion.div
@@ -489,26 +532,6 @@ function ProductContent() {
         className={styles.cardImage}
       >
         <img src="./sanov_d3_img.png" alt="Sanov D3" />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ amount: 0.7 }}
-        className={`${styles.productContent} ${styles.marginBottom}`}
-      >
-        <div className={`${styles.productText} `}>
-          <h3>Sanov D3</h3>
-          <div style={{ textAlign: "left" }}>
-            <ul>
-              <li style={{ marginBottom: "10px" }}>
-                Vitamin D3 Oral Solution 60000 IU
-              </li>
-              <li style={{ marginBottom: "10px" }}>Packing : 1*4 Bottles</li>
-            </ul>
-          </div>
-        </div>
       </motion.div>
     </div>
   );

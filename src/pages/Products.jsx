@@ -11,6 +11,7 @@ const productsSlide = [
   { name: "AV Ten", img: "./av_ten_img.png" },
   { name: "AV Trienol", img: "./av_trienol_img.png" },
   { name: "Avitaz", img: "./avitaz_img.png" },
+  { name: "Avixib", img: "./avixib_img.png" },
   { name: "Calote", img: "./calote_img.png" },
   { name: "genu_oil", img: "./genu_oil_img.png" },
   { name: "Glutasan-250mg", img: "./glutasan_250mg_img.png" },
