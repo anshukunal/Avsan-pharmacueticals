@@ -8,6 +8,7 @@
 
 .container {
   display: flex;
+  height: 88vh;
 }
 
 .contactImgBox {
@@ -19,6 +20,7 @@
 
 .contactContent {
   flex: 1;
+  align-self: center;
 }
 
 .contactHeader {
