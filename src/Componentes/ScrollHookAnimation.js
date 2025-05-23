@@ -12,7 +12,6 @@ const useIsMobileOrTablet = () => {
   useEffect(() => {
     const checkScreen = () => {
       setIsMobileOrTablet(window.innerWidth <= 1024); // Adjust breakpoint if needed
-      console.log(isMobileOrTablet);
     };
 
     checkScreen();
