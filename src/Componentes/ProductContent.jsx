@@ -342,7 +342,7 @@ function ProductContent() {
         className={`${styles.productContent} ${styles.row19}`}
       >
         <div className={`${styles.productText} `}>
-          <h3>Glutasn 250MG</h3>
+          <h3>Glutasan 250MG</h3>
           <div className={styles.productDetails}>
             <ul>
               <li className={styles.marginBottom}>L-Glutathione</li>
