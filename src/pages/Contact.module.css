@@ -12,7 +12,7 @@
 }
 
 .contactImgBox {
-  background-image: url(./contact_form_img.jpg);
+  background-image: url(/contact_form_img.jpg);
   background-size: cover;
   background-position: center;
   flex: 1;

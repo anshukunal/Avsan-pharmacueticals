@@ -61,16 +61,13 @@ header h1 {
 }
 
 .aboutUs .aboutUsContent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 80px;
+  background: #e3f4fd;
+  padding: 20px 0;
 }
 
 .aboutUs .aboutUsText {
-  flex: 1;
-  color: #555;
-  margin-left: 20px;
+  max-width: 700px;
+  margin: auto;
 }
 
 .aboutUsText h2 {

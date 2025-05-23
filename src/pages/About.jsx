@@ -54,9 +54,9 @@ const About = () => {
                 that empower people to lead healthier lives.
               </p>
             </div>
-            <div class={`${styles.aboutUsImage} ${styles.order}`}>
+            {/* <div class={`${styles.aboutUsImage} ${styles.order}`}>
               <img src="./who-we-are-img.png" alt="Pharmaceuticals Research" />
-            </div>
+            </div> */}
           </div>
 
           <div className={styles.cardContainer}>
